@@ -106,10 +106,10 @@ export const aboutData = {
 export const servicesData = [
   {
     number: "01",
-    title: "Full-Stack Web Engineering",
-    accent: "Scalable",
-    description: "Developing scalable, modular web applications with modern React 19, clean component patterns, high-performance Vite bundling, and secure authentication/guest workflows.",
-    tags: ["React 19", "JavaScript (ES6+)", "Vite", "Tailwind CSS 4", "REST APIs"],
+    title: "Exploratory Data Analysis (EDA)",
+    accent: "Analytical",
+    description: "Evaluating market datasets, uncovering pricing patterns, and conducting statistical hypothesis testing using Python to reveal actionable business insights.",
+    tags: ["Python", "EDA", "Statistical Analysis", "Hypothesis Testing", "Data Viz"],
   },
   {
     number: "02",
@@ -120,16 +120,16 @@ export const servicesData = [
   },
   {
     number: "03",
-    title: "Data Analytics & Hypothesis Testing",
-    accent: "Rigorous",
-    description: "Conducting exploratory data analysis (EDA), cleaning messy datasets, and performing statistical hypothesis testing using Python to reveal actionable business correlations.",
-    tags: ["Python", "EDA", "Hypothesis Testing", "Data Cleaning", "Data Viz"],
+    title: "Data Pipelines & ETL Transformation",
+    accent: "Automated",
+    description: "Cleaning and transforming raw data pipelines with Power Query, validating schema integrity, and automating sales trend indicators with Excel and automated workflows.",
+    tags: ["Power Query", "Data Cleaning", "Data Transformation", "Excel", "ETL"],
   },
   {
     number: "04",
-    title: "Database Design & Emerging Tech",
+    title: "Database Design & SQL Systems",
     accent: "Engineered",
-    description: "Managing both SQL relational systems and MongoDB Atlas cloud databases, while exploring cutting-edge AI integrations and augmented reality web interfaces trained at TAP Academy.",
+    description: "Managing relational schemas and NoSQL clusters using SQL, MySQL Workbench, and MongoDB Atlas, while exploring AI workflows and augmented reality tech trained at TAP Academy.",
     tags: ["SQL", "MongoDB Atlas", "MySQL Workbench", "Augmented Reality", "AI Tools"],
   },
 ]

@@ -58,7 +58,7 @@ export default function Services() {
             </span>
           </h2>
           <p className="text-xs sm:text-sm text-[#9CA3AF] max-w-xl">
-            Delivering data-driven analytics, interactive Power BI dashboards, and scalable full-stack web applications.
+            Delivering data-driven analytics, interactive Power BI dashboards, and automated data pipelines.
           </p>
         </div>
 
