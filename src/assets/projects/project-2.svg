@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <radialGradient id="edaGlow" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#CCFF00" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#050505" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect width="800" height="500" fill="#09090C" />
+  <circle cx="400" cy="250" r="240" fill="url(#edaGlow)" />
+  
+  <!-- Correlation Scatter & Bar Chart Mockup -->
+  <rect x="150" y="110" width="500" height="260" rx="6" fill="#111216" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1.5" />
+  
+  <!-- Tableau-like Bar Chart -->
+  <g transform="translate(190, 310)">
+    <!-- Axes -->
+    <line x1="0" y1="0" x2="420" y2="0" stroke="#ffffff" stroke-opacity="0.2" stroke-width="1.5" />
+    <line x1="0" y1="0" x2="0" y2="-150" stroke="#ffffff" stroke-opacity="0.2" stroke-width="1.5" />
+    
+    <!-- Bars -->
+    <rect x="25" y="-120" width="30" height="120" fill="#CCFF00" rx="2" />
+    <rect x="85" y="-95" width="30" height="95" fill="#CCFF00" fill-opacity="0.8" rx="2" />
+    <rect x="145" y="-135" width="30" height="135" fill="#CCFF00" rx="2" />
+    <rect x="205" y="-70" width="30" height="70" fill="#CCFF00" fill-opacity="0.6" rx="2" />
+    <rect x="265" y="-110" width="30" height="110" fill="#CCFF00" fill-opacity="0.75" rx="2" />
+    <rect x="325" y="-145" width="30" height="145" fill="#CCFF00" rx="2" />
+
+    <!-- Trend line -->
+    <path d="M40 -115 Q 160 -150 220 -80 T 340 -150" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-dasharray="4 4" />
+  </g>
+
+  <!-- Labels -->
+  <text x="50" y="70" fill="#CCFF00" font-family="'Inter', sans-serif" font-size="13" font-weight="700" letter-spacing="3">EXPLORATORY DATA ANALYSIS // PYTHON &amp; TABLEAU</text>
+  <text x="50" y="445" fill="#9CA3AF" font-family="'Inter', sans-serif" font-size="13" letter-spacing="1">STATISTICAL HYPOTHESIS TESTING • SPECIFICATION CORRELATION</text>
+  <circle cx="750" cy="70" r="5" fill="#CCFF00" />
+</svg>
