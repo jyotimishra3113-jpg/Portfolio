@@ -20,18 +20,23 @@ export default function About() {
     if (prefersReducedMotion) return
 
     const ctx = gsap.context(() => {
-      gsap.from('.about-animate', {
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: 'top 75%',
-          once: true, // play-and-stay
-        },
-        y: 40,
-        opacity: 0,
-        duration: 0.9,
-        stagger: 0.12,
-        ease: 'power3.out',
-      })
+      gsap.fromTo(
+        '.about-animate',
+        { opacity: 0, y: 30 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          stagger: 0.1,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: 'top 90%',
+            once: true,
+          },
+        }
+      )
+      ScrollTrigger.refresh()
     }, sectionRef)
 
     return () => ctx.revert()

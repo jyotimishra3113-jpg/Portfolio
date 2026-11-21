@@ -21,8 +21,13 @@ export default function App() {
       window.addEventListener('load', handleLoad)
     }
 
+    const timer = setTimeout(() => {
+      ScrollTrigger.refresh()
+    }, 400)
+
     return () => {
       window.removeEventListener('load', handleLoad)
+      clearTimeout(timer)
     }
   }, [])
 

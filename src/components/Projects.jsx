@@ -28,18 +28,28 @@ export default function Projects() {
     if (prefersReducedMotion) return
 
     const ctx = gsap.context(() => {
-      gsap.from('.project-item', {
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: 'top 75%',
-          once: true,
-        },
-        y: 40,
-        opacity: 0,
-        duration: 0.9,
-        stagger: 0.2,
-        ease: 'power3.out',
+      const items = gsap.utils.toArray('.project-item')
+
+      items.forEach((item) => {
+        gsap.fromTo(
+          item,
+          { opacity: 0, y: 30 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.7,
+            ease: 'power2.out',
+            scrollTrigger: {
+              trigger: item,
+              start: 'top 92%',
+              once: true, // play-and-stay: never disappear on scroll back
+            },
+          }
+        )
       })
+
+      // Immediate refresh to ensure calculation accuracy
+      ScrollTrigger.refresh()
     }, sectionRef)
 
     return () => ctx.revert()
@@ -54,7 +64,7 @@ export default function Projects() {
       <div className="max-w-7xl mx-auto space-y-16">
         {/* Section Header */}
         <div className="space-y-3">
-          <p className="text-xs uppercase tracking-[0.3em] text-[#CCFF00] font-semibold">
+          <p className="text-xs uppercase tracking-[0.3em] text-[#CCFF00] font-semibold font-mono">
             SELECTED WORKS &amp; EXPERIMENTS
           </p>
           <h2 className="text-4xl sm:text-6xl font-black uppercase tracking-tighter leading-none bg-gradient-to-b from-white via-neutral-200 to-neutral-500 bg-clip-text text-transparent">
@@ -76,7 +86,7 @@ export default function Projects() {
             return (
               <div
                 key={project.id}
-                className="project-item group border border-white/10 bg-[#08080a] hover:border-[#CCFF00]/40 transition-all duration-500 grid grid-cols-1 lg:grid-cols-12 overflow-hidden"
+                className="project-item group border border-white/10 bg-[#08080a] hover:border-[#CCFF00]/40 transition-all duration-500 grid grid-cols-1 lg:grid-cols-12 overflow-hidden opacity-100"
               >
                 {/* Visual Preview */}
                 <div className="lg:col-span-7 relative aspect-video bg-neutral-950 overflow-hidden flex items-center justify-center border-b lg:border-b-0 lg:border-r border-white/10">

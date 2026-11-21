@@ -13,18 +13,27 @@ export default function Services() {
     if (prefersReducedMotion) return
 
     const ctx = gsap.context(() => {
-      gsap.from('.service-card', {
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: 'top 75%',
-          once: true,
-        },
-        y: 40,
-        opacity: 0,
-        duration: 0.8,
-        stagger: 0.15,
-        ease: 'power3.out',
+      const cards = gsap.utils.toArray('.service-card')
+
+      cards.forEach((card) => {
+        gsap.fromTo(
+          card,
+          { opacity: 0, y: 30 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.7,
+            ease: 'power2.out',
+            scrollTrigger: {
+              trigger: card,
+              start: 'top 90%',
+              once: true,
+            },
+          }
+        )
       })
+
+      ScrollTrigger.refresh()
     }, sectionRef)
 
     return () => ctx.revert()
@@ -39,7 +48,7 @@ export default function Services() {
       <div className="max-w-7xl mx-auto space-y-16">
         {/* Section Header */}
         <div className="space-y-3">
-          <p className="text-xs uppercase tracking-[0.3em] text-[#CCFF00] font-semibold">
+          <p className="text-xs uppercase tracking-[0.3em] text-[#CCFF00] font-semibold font-mono">
             CAPABILITIES &amp; EXPERTISE
           </p>
           <h2 className="text-4xl sm:text-6xl font-black uppercase tracking-tighter leading-none bg-gradient-to-b from-white via-neutral-200 to-neutral-500 bg-clip-text text-transparent">
@@ -58,7 +67,7 @@ export default function Services() {
           {servicesData.map((service) => (
             <div
               key={service.number}
-              className="service-card group relative p-8 md:p-10 border border-white/10 bg-[#08080a] hover:border-[#CCFF00]/50 transition-all duration-300 flex flex-col justify-between space-y-6"
+              className="service-card group relative p-8 md:p-10 border border-white/10 bg-[#08080a] hover:border-[#CCFF00]/50 transition-all duration-300 flex flex-col justify-between space-y-6 opacity-100"
             >
               {/* Top Row: Index & Accent */}
               <div className="flex items-center justify-between border-b border-white/5 pb-4">
