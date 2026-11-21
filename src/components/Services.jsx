@@ -49,16 +49,16 @@ export default function Services() {
         {/* Section Header */}
         <div className="space-y-3">
           <p className="text-xs uppercase tracking-[0.3em] text-[#CCFF00] font-semibold font-mono">
-            CAPABILITIES &amp; EXPERTISE
+            CORE SERVICES &amp; EXPERTISE
           </p>
           <h2 className="text-4xl sm:text-6xl font-black uppercase tracking-tighter leading-none bg-gradient-to-b from-white via-neutral-200 to-neutral-500 bg-clip-text text-transparent">
-            ENGINEERING DISCIPLINES{' '}
+            TECHNICAL EXPERTISE &amp;{' '}
             <span className="font-['Playfair_Display'] italic font-normal text-white">
-              Offered
+              Solutions
             </span>
           </h2>
           <p className="text-xs sm:text-sm text-[#9CA3AF] max-w-xl">
-            Delivering high-fidelity web applications, responsive visual architectures, and modern technological integrations.
+            Delivering data-driven analytics, interactive Power BI dashboards, and scalable full-stack web applications.
           </p>
         </div>
 
