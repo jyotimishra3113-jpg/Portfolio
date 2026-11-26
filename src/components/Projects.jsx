@@ -105,7 +105,7 @@ export default function Projects() {
                   )}
 
                   {/* Corner Badge */}
-                  <div className="absolute top-4 left-4 px-3 py-1 bg-black/80 backdrop-blur-md border border-white/10 text-[11px] font-mono uppercase tracking-wider text-[#CCFF00]">
+                  <div className="absolute top-4 right-4 px-3 py-1 bg-black/80 backdrop-blur-md border border-white/10 text-[11px] font-mono uppercase tracking-wider text-[#CCFF00]">
                     {project.category}
                   </div>
                 </div>
