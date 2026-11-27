@@ -94,11 +94,11 @@ export const aboutData = {
   certifications: [
     {
       name: "Power BI Data Analyst Associate",
-      issuer: "Microsoft / Industry Credential",
+      issuer: "LinkedIn Learning",
     },
     {
       name: "SQL for Data Analysis",
-      issuer: "Professional Certification",
+      issuer: "LinkedIn Learning",
     },
   ],
 }
