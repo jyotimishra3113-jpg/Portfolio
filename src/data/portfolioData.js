@@ -54,7 +54,7 @@ export const aboutData = {
   ],
   stats: [
     { value: "2026", label: "BCA Graduating Year" },
-    { value: "3+", label: "Production & Analytics Projects" },
+    { value: "3", label: "Analytics & Web Projects" },
     { value: "Active", label: "TAP Academy Intern" },
   ],
   highlights: [
@@ -136,20 +136,8 @@ export const servicesData = [
 
 export const projectsData = [
   {
-    id: "project-1",
-    number: "01",
-    title: "GlobalAKJobs Recruitment Platform",
-    subtitle: "Web Development Internship / Yaswanth Rural Development Society",
-    category: "Full-Stack Web",
-    description: "Contributed as a Web Development Intern to the development of GlobalAKJobs, an international recruitment platform connecting job seekers with employment opportunities in the Maldives. Engineered and tested core functionality within the Guest Module and Security Module.",
-    tags: ["Web Development", "Guest Module", "Security Module", "Internship", "Production"],
-    githubUrl: "https://github.com/jyotimishra3113-jpg",
-    liveUrl: "https://globalakjobs.vercel.app",
-    image: "/src/assets/projects/project-1.svg",
-  },
-  {
     id: "project-2",
-    number: "02",
+    number: "01",
     title: "Smartphone Market Data Analysis & Hypothesis Testing",
     subtitle: "Exploratory Data Analysis / Python & Tableau",
     category: "Data Analytics",
@@ -161,10 +149,10 @@ export const projectsData = [
   },
   {
     id: "project-3",
-    number: "03",
+    number: "02",
     title: "Business Sales & Performance Dashboard",
     subtitle: "Power BI / DAX / Power Query Pipelines",
-    category: "Business Intelligence",
+    category: "Data Analytics & BI",
     description: "Engineered dynamic Power BI dashboards utilizing calculated DAX measures to track revenue, profit margins, and key performance indicators (KPIs). Streamlined data transformation pipelines in Power Query to uncover actionable sales trends.",
     tags: ["Power BI", "DAX", "Power Query", "KPI Dashboards", "Sales Analytics"],
     githubUrl: "https://github.com/jyotimishra3113-jpg",
@@ -172,16 +160,16 @@ export const projectsData = [
     image: "/src/assets/projects/project-3.svg",
   },
   {
-    id: "project-4",
-    number: "04",
-    title: "Spatial AR & Web Experience",
-    subtitle: "TAP Academy Internship / AR Innovation",
-    category: "Augmented Reality & UI",
-    description: "An experimental interactive web application integrating augmented reality concepts and fluid GSAP micro-animations, created during my internship at TAP Academy to explore next-generation browser experiences.",
-    tags: ["Augmented Reality", "GSAP ScrollTrigger", "React 19", "TAP Academy"],
+    id: "project-1",
+    number: "03",
+    title: "GlobalAKJobs Recruitment Platform",
+    subtitle: "Web Development Internship / Yaswanth Rural Development Society",
+    category: "Web Development",
+    description: "Contributed as a Web Development Intern to the development of GlobalAKJobs, an international recruitment platform connecting job seekers with employment opportunities in the Maldives. Engineered and tested core functionality within the Guest Module and Security Module.",
+    tags: ["Web Development", "Guest Module", "Security Module", "Internship", "Production"],
     githubUrl: "https://github.com/jyotimishra3113-jpg",
     liveUrl: "https://globalakjobs.vercel.app",
-    image: "/src/assets/projects/project-4.svg",
+    image: "/src/assets/projects/project-1.svg",
   },
 ]
 

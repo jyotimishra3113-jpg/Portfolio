@@ -74,7 +74,7 @@ export default function Projects() {
             </span>
           </h2>
           <p className="text-xs sm:text-sm text-[#9CA3AF] max-w-xl">
-            A curation of full-stack platforms, augmented reality prototypes, and performance-tuned applications.
+            A curation of exploratory data analysis models, interactive Power BI dashboards, and web development applications.
           </p>
         </div>
 
