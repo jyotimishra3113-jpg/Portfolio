@@ -6,13 +6,13 @@ export const academy = {
 
 export const personalInfo = {
   name: "Jyoti Mishra",
-  headline: "SOFTWARE & DATA PROFESSIONAL",
-  title: "Data Analytics & Full-Stack Development",
+  headline: "DATA ANALYTICS & BUSINESS INTELLIGENCE",
+  title: "Data Analytics & Business Intelligence",
   location: "Bengaluru, India",
   email: "jyotimishra3113@gmail.com",
   phone: "7676320307",
   availability: "Available for Full-time Roles & Internships",
-  bio: "Software and Data professional with hands-on experience in full-stack engineering and data analytics. BCA candidate at St. Joseph's University, trained in full-stack web technologies, AI, and augmented reality at TAP Academy. Skilled in Python, SQL, MongoDB Atlas, Power BI, and Tableau to engineer technical solutions and deliver data-driven insights.",
+  bio: "I am a BCA graduate with a strong interest in Data Analytics and Business Intelligence. I enjoy exploring datasets, identifying meaningful patterns, and transforming raw data into actionable insights that support better decision-making. Through hands-on projects, I have gained practical experience in data cleaning, analysis, statistical techniques, and interactive dashboard development using Python, SQL, Excel, Power BI, and Tableau. I am continuously learning and strengthening my analytical and problem-solving skills to build a career in Data Analytics.",
   resumeUrl: "#",
 }
 
@@ -27,30 +27,30 @@ export const navLinks = [
 export const skillsTicker = [
   "Python",
   "SQL",
-  "React 19",
   "Power BI",
   "Tableau",
+  "Excel",
   "MongoDB Atlas",
   "Data Analytics",
   "DAX & Power Query",
   "Exploratory Data Analysis",
-  "Tailwind CSS 4",
-  "GSAP Animations",
+  "Business Intelligence",
+  "Statistical Analysis",
   "MySQL Workbench",
   "Hypothesis Testing",
-  "Full-Stack Development",
+  "Data Cleaning",
   "Augmented Reality",
   "TAP Academy Trained",
 ]
 
 export const aboutData = {
   eyebrow: "BACKGROUND & PHILOSOPHY",
-  heading: "CONVERGING FULL-STACK ARCHITECTURE AND DATA",
-  accentWord: "Analytics",
+  heading: "TURNING RAW DATA INTO ACTIONABLE",
+  accentWord: "Intelligence",
   paragraphs: [
-    "I am a Software and Data professional pursuing a Bachelor of Computer Applications (BCA) at St. Joseph's University, Bengaluru (2023–2026), concurrently sharpening my software engineering and creative coding capabilities through specialized placement training at TAP Academy.",
-    "My hands-on experience spans contributing to real-world production platforms—such as developing core Guest and Security modules during my Web Development Internship at GlobalAKJobs—as well as executing end-to-end data analytics, statistical hypothesis testing, and building dynamic Power BI dashboards with advanced DAX measures.",
-    "Whether designing reactive, high-speed user interfaces or querying complex relational databases, my focus is delivering measurable value through speed, analytical rigor, and pristine code.",
+    "I am a BCA graduate with a strong interest in Data Analytics and Business Intelligence. I enjoy exploring datasets, identifying meaningful patterns, and transforming raw data into actionable insights that support better decision-making.",
+    "Through hands-on projects, I have gained practical experience in data cleaning, analysis, statistical techniques, and interactive dashboard development using Python, SQL, Excel, Power BI, and Tableau.",
+    "I am continuously learning and strengthening my analytical and problem-solving skills to build a rewarding career in Data Analytics, backed by placement training at TAP Academy.",
   ],
   stats: [
     { value: "2026", label: "BCA Graduating Year" },
@@ -63,12 +63,12 @@ export const aboutData = {
       desc: "EDA, hypothesis testing, DAX measures, KPI tracking, and interactive dashboards via Power BI & Tableau.",
     },
     {
-      title: "Full-Stack Development",
-      desc: "Architecting modular applications with React 19, Tailwind 4, GSAP, and secure guest/security modules.",
+      title: "Data Cleaning & ETL",
+      desc: "Transforming raw datasets with Power Query, Excel, and automated transformation pipelines.",
     },
     {
       title: "Database Engineering",
-      desc: "Relational and NoSQL schemas utilizing SQL, MySQL Workbench, MongoDB Atlas, and Power Query pipelines.",
+      desc: "Relational and NoSQL schemas utilizing SQL, MySQL Workbench, MongoDB Atlas, and query optimization.",
     },
   ],
   education: [
@@ -189,7 +189,7 @@ export const contactData = {
   eyebrow: "GET IN TOUCH",
   heading: "READY TO CONTRIBUTE VALUE TO YOUR TEAM",
   accentWord: "Immediately",
-  description: "Actively seeking opportunities in Full-Stack Web Development, Data Analytics, and Software Engineering. Open for discussions, internships, and full-time technical positions in Bengaluru or remote.",
+  description: "Actively seeking opportunities in Data Analytics, Business Intelligence, and Data Analyst roles. Open for discussions, internships, and full-time technical positions in Bengaluru or remote.",
   email: "jyotimishra3113@gmail.com",
   phone: "7676320307",
   location: "Bengaluru, Karnataka, India",
@@ -207,7 +207,7 @@ export const contactData = {
 }
 
 export const footerData = {
-  tagline: "Software & Data Professional • St. Joseph's University • TAP Academy",
+  tagline: "Data Analytics & Business Intelligence • St. Joseph's University • TAP Academy",
   credit: "Trained at TAP Academy",
   creditUrl: "https://thetapacademy.com/",
 }

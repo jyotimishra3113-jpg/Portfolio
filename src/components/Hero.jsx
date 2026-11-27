@@ -85,7 +85,7 @@ export default function Hero() {
               <span className="font-['Playfair_Display'] italic font-normal text-white">
                 Data
               </span>{' '}
-              Analytics &amp; Software Engineering
+              Analytics &amp; Business Intelligence
             </p>
           </div>
 
