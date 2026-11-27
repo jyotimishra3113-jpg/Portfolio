@@ -144,7 +144,19 @@ export const projectsData = [
     description: "Performed end-to-end Exploratory Data Analysis (EDA) and statistical hypothesis testing on an extensive smartphone market dataset. Evaluated pricing trends and specification correlations, preprocessed datasets in Python, and published interactive Tableau visual storytelling dashboards.",
     tags: ["Python", "Tableau", "EDA", "Hypothesis Testing", "Statistical Analysis"],
     githubUrl: "https://github.com/jyotimishra3113-jpg/smartphone_market_analysis-",
-    liveUrl: "https://github.com/jyotimishra3113-jpg/smartphone_market_analysis-",
+    liveUrl: "https://github.com/jyotimishra3113-jpg/smartphone_market_analysis-/blob/main/Smartphone%20Market%20Analysis.twb",
+    buttons: [
+      {
+        label: "Source Code",
+        url: "https://github.com/jyotimishra3113-jpg/smartphone_market_analysis-",
+        primary: false,
+      },
+      {
+        label: "Tableau Dashboard ↗",
+        url: "https://github.com/jyotimishra3113-jpg/smartphone_market_analysis-/blob/main/Smartphone%20Market%20Analysis.twb",
+        primary: true,
+      },
+    ],
     image: "/src/assets/projects/project-2.svg",
   },
   {
