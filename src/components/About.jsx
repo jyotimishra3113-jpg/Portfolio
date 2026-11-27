@@ -20,59 +20,22 @@ export default function About() {
     if (prefersReducedMotion) return
 
     const ctx = gsap.context(() => {
-      // Heading reveal
       gsap.fromTo(
-        '.intro-heading',
-        { opacity: 0, y: 35 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.9,
-          ease: 'power2.out',
-          scrollTrigger: {
-            trigger: sectionRef.current,
-            start: 'top 85%',
-            once: true,
-          },
-        }
-      )
-
-      // Two-column cards reveal
-      gsap.fromTo(
-        '.intro-col-reveal',
+        '.about-animate',
         { opacity: 0, y: 30 },
         {
           opacity: 1,
           y: 0,
           duration: 0.8,
-          stagger: 0.15,
-          ease: 'power2.out',
-          scrollTrigger: {
-            trigger: sectionRef.current,
-            start: 'top 80%',
-            once: true,
-          },
-        }
-      )
-
-      // Supporting details reveal
-      gsap.fromTo(
-        '.intro-details-reveal',
-        { opacity: 0, y: 25 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.7,
           stagger: 0.1,
           ease: 'power2.out',
           scrollTrigger: {
-            trigger: '.intro-details-grid',
-            start: 'top 85%',
+            trigger: sectionRef.current,
+            start: 'top 90%',
             once: true,
           },
         }
       )
-
       ScrollTrigger.refresh()
     }, sectionRef)
 
@@ -86,174 +49,152 @@ export default function About() {
       className="relative min-h-screen bg-[#050505] text-white py-24 px-6 md:px-12 border-b border-white/5 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto space-y-16">
-        {/* Oversized INTRO Heading */}
-        <div className="space-y-2">
-          <p className="text-xs uppercase tracking-[0.3em] text-[#CCFF00] font-semibold font-mono">
-            SECTION // 02
+        {/* Section Header */}
+        <div className="space-y-3 about-animate">
+          <p className="text-xs uppercase tracking-[0.3em] text-[#CCFF00] font-semibold">
+            {aboutData.eyebrow}
           </p>
-          <h2 className="intro-heading text-6xl sm:text-8xl md:text-9xl font-black uppercase tracking-tighter leading-none bg-gradient-to-b from-white via-neutral-200 to-neutral-600 bg-clip-text text-transparent select-none">
-            INTRO
+          <h2 className="text-4xl sm:text-6xl font-black uppercase tracking-tighter leading-none bg-gradient-to-b from-white via-neutral-200 to-neutral-500 bg-clip-text text-transparent max-w-4xl">
+            {aboutData.heading}{' '}
+            <span className="font-['Playfair_Display'] italic font-normal text-white">
+              {aboutData.accentWord}
+            </span>
           </h2>
         </div>
 
-        {/* Two-Column Editorial Composition */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
-          {/* Left Column: Clean Professional Portrait */}
-          <div className="intro-col-reveal lg:col-span-5 flex flex-col justify-between rounded-3xl border border-white/10 bg-[#0a0a0d] p-4 sm:p-5 shadow-2xl">
-            <div className="relative aspect-[3/4] w-full rounded-2xl overflow-hidden bg-black">
-              {aboutPortraitSrc ? (
-                <img
-                  src={aboutPortraitSrc}
-                  alt="Jyoti Mishra"
-                  className="w-full h-full object-cover object-top filter grayscale contrast-105 hover:grayscale-0 transition-all duration-700"
-                />
-              ) : (
-                <div className="w-full h-full flex flex-col items-center justify-center p-6 text-center text-[#9CA3AF]">
-                  <span className="text-xs uppercase tracking-widest font-mono">
-                    Portrait
-                  </span>
-                </div>
-              )}
-            </div>
-
-            {/* Bottom Meta Pill under portrait */}
-            <div className="pt-4 px-2 flex items-center justify-between text-xs text-[#9CA3AF] border-t border-white/5 mt-4">
-              <span className="font-mono text-[11px] tracking-wider text-[#CCFF00]">
-                DATA ANALYST
-              </span>
-              <a
-                href={academy.url}
-                target="_blank"
-                rel="noreferrer"
-                className="text-white hover:text-[#CCFF00] font-semibold transition-colors flex items-center gap-1 font-mono text-[11px]"
-              >
-                {academy.name} ↗
-              </a>
-            </div>
-          </div>
-
-          {/* Right Column: Large Rounded Dark-Grey Introduction Card */}
-          <div className="intro-col-reveal lg:col-span-7 rounded-3xl border border-white/10 bg-[#0e1015] p-8 sm:p-12 md:p-14 flex flex-col justify-between space-y-8 shadow-2xl">
-            <div className="space-y-6">
-              <div className="flex items-center justify-between border-b border-white/10 pb-4">
-                <span className="text-xs font-mono uppercase tracking-[0.25em] text-[#CCFF00]">
-                  EDITORIAL STATEMENT
-                </span>
-                <span className="text-xs font-mono text-neutral-500">
-                  BENGALURU, IN
-                </span>
+        {/* Content Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          {/* Portrait Column */}
+          <div className="lg:col-span-5 about-animate flex flex-col items-center gap-6">
+            <div className="relative w-full max-w-sm rounded-none border border-white/10 bg-[#09090b] p-3 overflow-hidden group">
+              <div className="relative aspect-[3/4] overflow-hidden bg-black">
+                {aboutPortraitSrc ? (
+                  <img
+                    src={aboutPortraitSrc}
+                    alt="Jyoti Mishra"
+                    className="w-full h-full object-cover object-top filter grayscale contrast-110 group-hover:grayscale-0 transition-all duration-700"
+                  />
+                ) : (
+                  <div className="w-full h-full flex flex-col items-center justify-center p-6 text-center text-[#9CA3AF]">
+                    <span className="text-xs uppercase tracking-widest">Portrait</span>
+                  </div>
+                )}
+                <div className="absolute inset-x-0 bottom-0 h-1 bg-[#CCFF00]" />
               </div>
 
-              {/* Exact Introduction Copy */}
-              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight">
-                Hey, I'm Jyoti.
-              </h3>
-
-              <div className="space-y-4 text-sm sm:text-base text-neutral-300 leading-relaxed font-normal">
-                <p>
-                  I am a BCA graduate with a strong interest in Data Analytics and Business Intelligence. I enjoy exploring datasets, identifying meaningful patterns, and transforming raw data into actionable insights.
-                </p>
-                <p>
-                  Through hands-on projects, I have worked with Python, SQL, Excel, Power BI, and Tableau, developing skills in data analysis, statistical techniques, and interactive dashboard development. I am continuously learning and looking forward to applying my analytical skills to real-world challenges.
-                </p>
-              </div>
-            </div>
-
-            {/* Quick Skill Badges at bottom of card */}
-            <div className="pt-6 border-t border-white/10 flex flex-wrap gap-2">
-              {['Python', 'SQL', 'Power BI', 'Tableau', 'Excel', 'DAX & Power Query', 'Statistical Analysis'].map((tool) => (
-                <span
-                  key={tool}
-                  className="px-3 py-1.5 rounded-full bg-white/5 text-[11px] font-mono text-neutral-300 border border-white/5"
+              {/* Internship Tag */}
+              <div className="pt-4 pb-2 px-2 flex items-center justify-between text-xs text-[#9CA3AF]">
+                <span className="font-mono">INTERNSHIP</span>
+                <a
+                  href={academy.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-white hover:text-[#CCFF00] font-semibold transition-colors flex items-center gap-1 font-mono"
                 >
-                  {tool}
-                </span>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Preserved Educational Formation, Certifications & Metrics */}
-        <div className="intro-details-grid pt-12 border-t border-white/10 space-y-12">
-          {/* Metrics Row */}
-          <div className="grid grid-cols-3 gap-4">
-            {aboutData.stats.map((stat) => (
-              <div key={stat.label} className="intro-details-reveal p-5 rounded-2xl border border-white/5 bg-[#08080a] space-y-1">
-                <div className="text-2xl sm:text-3xl font-black text-white font-mono tracking-tight">
-                  {stat.value}
-                </div>
-                <div className="text-[11px] sm:text-xs uppercase tracking-wider text-[#9CA3AF]">
-                  {stat.label}
-                </div>
+                  {academy.name} ↗
+                </a>
               </div>
-            ))}
-          </div>
+            </div>
 
-          {/* Academic Formation & Credentials Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-            {/* Education Timeline */}
-            <div className="lg:col-span-7 space-y-4">
-              <h4 className="text-xs uppercase tracking-[0.25em] text-[#CCFF00] font-semibold font-mono">
-                ACADEMIC FORMATION
-              </h4>
+            {/* Certifications Card */}
+            <div className="w-full max-w-sm border border-white/10 bg-[#08080a] p-6 space-y-4">
+              <span className="text-xs uppercase tracking-widest text-[#CCFF00] font-semibold font-mono block">
+                CREDENTIALS &amp; CERTIFICATIONS
+              </span>
               <div className="space-y-3">
-                {aboutData.education.map((edu) => (
-                  <div
-                    key={edu.degree}
-                    className="intro-details-reveal p-5 rounded-2xl border border-white/10 bg-[#08080a] flex flex-col sm:flex-row sm:items-center justify-between gap-3 hover:border-white/20 transition-colors"
-                  >
+                {aboutData.certifications.map((cert) => (
+                  <div key={cert.name} className="flex items-start gap-3">
+                    <span className="text-[#CCFF00] text-sm mt-0.5">✦</span>
                     <div>
-                      <h5 className="text-sm font-bold text-white uppercase tracking-tight">
-                        {edu.degree}
-                      </h5>
-                      <p className="text-xs text-neutral-300 mt-0.5">{edu.institution}</p>
-                      <p className="text-[11px] text-[#9CA3AF] mt-1">{edu.details}</p>
+                      <p className="text-xs font-semibold text-white tracking-wide">{cert.name}</p>
+                      <p className="text-[11px] text-neutral-400 font-mono">{cert.issuer}</p>
                     </div>
-                    <span className="font-mono text-xs text-[#CCFF00] bg-white/5 px-3 py-1 rounded-full self-start sm:self-center border border-white/5 whitespace-nowrap">
-                      {edu.period}
-                    </span>
                   </div>
                 ))}
               </div>
             </div>
+          </div>
 
-            {/* Credentials & Internship Box */}
-            <div className="lg:col-span-5 space-y-6">
-              {/* Certifications */}
-              <div className="intro-details-reveal rounded-2xl border border-white/10 bg-[#08080a] p-6 space-y-4">
-                <span className="text-xs uppercase tracking-widest text-[#CCFF00] font-semibold font-mono block">
-                  CREDENTIALS &amp; CERTIFICATIONS
-                </span>
-                <div className="space-y-3">
-                  {aboutData.certifications.map((cert) => (
-                    <div key={cert.name} className="flex items-start gap-3">
-                      <span className="text-[#CCFF00] text-sm mt-0.5">✦</span>
-                      <div>
-                        <p className="text-xs font-semibold text-white tracking-wide">{cert.name}</p>
-                        <p className="text-[11px] text-neutral-400 font-mono">{cert.issuer}</p>
-                      </div>
-                    </div>
-                  ))}
+          {/* Text, Experience, Stats & Education Column */}
+          <div className="lg:col-span-7 space-y-10">
+            {/* Bio Paragraphs */}
+            <div className="space-y-4 text-[#9CA3AF] text-sm sm:text-base leading-relaxed about-animate">
+              {aboutData.paragraphs.map((p, idx) => (
+                <p key={idx}>{p}</p>
+              ))}
+            </div>
+
+            {/* Internship Experience Note */}
+            <div className="p-6 border-l-2 border-[#CCFF00] bg-white/[0.02] space-y-2 about-animate">
+              <p className="text-xs uppercase tracking-widest text-[#CCFF00] font-semibold font-mono">
+                Internship Experience
+              </p>
+              <p className="text-xs sm:text-sm text-neutral-300">
+                Currently interning at{' '}
+                <a
+                  href={academy.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-white underline hover:text-[#CCFF00] transition-colors"
+                >
+                  {academy.name}
+                </a>
+                , gaining practical experience in data analysis, business intelligence workflows, and real-world project development.
+              </p>
+            </div>
+
+            {/* Metrics */}
+            <div className="grid grid-cols-3 gap-4 pt-2 border-t border-white/10 about-animate">
+              {aboutData.stats.map((stat) => (
+                <div key={stat.label} className="space-y-1">
+                  <div className="text-2xl sm:text-3xl font-black text-white font-mono tracking-tight">
+                    {stat.value}
+                  </div>
+                  <div className="text-[11px] sm:text-xs uppercase tracking-wider text-[#9CA3AF]">
+                    {stat.label}
+                  </div>
                 </div>
-              </div>
+              ))}
+            </div>
 
-              {/* Internship Note */}
-              <div className="intro-details-reveal p-6 rounded-2xl border-l-2 border-[#CCFF00] bg-[#0a0a0d] border border-white/5 space-y-2">
-                <p className="text-xs uppercase tracking-widest text-[#CCFF00] font-semibold font-mono">
-                  Internship Experience
-                </p>
-                <p className="text-xs text-neutral-300 leading-relaxed">
-                  Currently interning at{' '}
-                  <a
-                    href={academy.url}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-white underline hover:text-[#CCFF00] transition-colors"
+            {/* Core Pillars */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2 about-animate">
+              {aboutData.highlights.map((item) => (
+                <div
+                  key={item.title}
+                  className="p-5 border border-white/5 bg-[#0a0a0c] hover:border-[#CCFF00]/40 transition-colors duration-300 space-y-2"
+                >
+                  <h3 className="text-xs uppercase tracking-wider font-bold text-white">
+                    {item.title}
+                  </h3>
+                  <p className="text-xs text-[#9CA3AF] leading-normal">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+
+            {/* Education Timeline */}
+            <div className="space-y-4 pt-4 border-t border-white/10 about-animate">
+              <h3 className="text-xs uppercase tracking-[0.25em] text-[#CCFF00] font-semibold font-mono">
+                ACADEMIC FORMATION
+              </h3>
+              <div className="space-y-4">
+                {aboutData.education.map((edu) => (
+                  <div
+                    key={edu.degree}
+                    className="p-5 border border-white/10 bg-[#08080a] flex flex-col sm:flex-row sm:items-center justify-between gap-3 hover:border-white/25 transition-colors"
                   >
-                    {academy.name}
-                  </a>
-                  , gaining practical experience in data analysis, business intelligence workflows, and real-world project development.
-                </p>
+                    <div>
+                      <h4 className="text-sm font-bold text-white uppercase tracking-tight">
+                        {edu.degree}
+                      </h4>
+                      <p className="text-xs text-neutral-300 mt-0.5">{edu.institution}</p>
+                      <p className="text-[11px] text-[#9CA3AF] mt-1">{edu.details}</p>
+                    </div>
+                    <span className="font-mono text-xs text-[#CCFF00] bg-white/5 px-3 py-1 self-start sm:self-center border border-white/5 whitespace-nowrap">
+                      {edu.period}
+                    </span>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
