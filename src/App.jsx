@@ -2,7 +2,6 @@ import { useEffect } from 'react'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Hero from './components/Hero'
 import About from './components/About'
-import IntroVideo from './components/IntroVideo'
 import Services from './components/Services'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
@@ -35,7 +34,6 @@ export default function App() {
     <div className="min-h-screen bg-[#050505] text-white selection:bg-[#CCFF00] selection:text-black">
       <Hero />
       <About />
-      <IntroVideo />
       <Services />
       <Projects />
       <Contact />
