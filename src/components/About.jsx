@@ -82,9 +82,9 @@ export default function About() {
                 <div className="absolute inset-x-0 bottom-0 h-1 bg-[#CCFF00]" />
               </div>
 
-              {/* Training Tag */}
+              {/* Internship Tag */}
               <div className="pt-4 pb-2 px-2 flex items-center justify-between text-xs text-[#9CA3AF]">
-                <span className="font-mono">PLACEMENT TRAINING</span>
+                <span className="font-mono">INTERNSHIP</span>
                 <a
                   href={academy.url}
                   target="_blank"
@@ -124,13 +124,13 @@ export default function About() {
               ))}
             </div>
 
-            {/* Placement & Training Note */}
+            {/* Internship Experience Note */}
             <div className="p-6 border-l-2 border-[#CCFF00] bg-white/[0.02] space-y-2 about-animate">
               <p className="text-xs uppercase tracking-widest text-[#CCFF00] font-semibold font-mono">
-                Training &amp; Development
+                Internship Experience
               </p>
               <p className="text-xs sm:text-sm text-neutral-300">
-                Built during intensive placement training at{' '}
+                Currently interning at{' '}
                 <a
                   href={academy.url}
                   target="_blank"
@@ -139,7 +139,7 @@ export default function About() {
                 >
                   {academy.name}
                 </a>
-                , focusing on scalable full-stack development, applied AI architectures, and augmented reality integration.
+                , gaining practical experience in data analysis, business intelligence workflows, and real-world project development.
               </p>
             </div>
 

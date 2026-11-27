@@ -1,7 +1,7 @@
 export const academy = {
   name: "TAP Academy",
   url: "https://thetapacademy.com/",
-  program: "Full-Stack Web Development, AI & Augmented Reality",
+  program: "Data Analytics, AI & Business Intelligence",
 }
 
 export const personalInfo = {
@@ -40,7 +40,7 @@ export const skillsTicker = [
   "Hypothesis Testing",
   "Data Cleaning",
   "Augmented Reality",
-  "TAP Academy Trained",
+  "TAP Academy Intern",
 ]
 
 export const aboutData = {
@@ -50,12 +50,12 @@ export const aboutData = {
   paragraphs: [
     "I am a BCA graduate with a strong interest in Data Analytics and Business Intelligence. I enjoy exploring datasets, identifying meaningful patterns, and transforming raw data into actionable insights that support better decision-making.",
     "Through hands-on projects, I have gained practical experience in data cleaning, analysis, statistical techniques, and interactive dashboard development using Python, SQL, Excel, Power BI, and Tableau.",
-    "I am continuously learning and strengthening my analytical and problem-solving skills to build a rewarding career in Data Analytics, backed by placement training at TAP Academy.",
+    "I am continuously learning and strengthening my analytical and problem-solving skills to build a rewarding career in Data Analytics, gaining hands-on industry experience during my internship at TAP Academy.",
   ],
   stats: [
     { value: "2026", label: "BCA Graduating Year" },
     { value: "3+", label: "Production & Analytics Projects" },
-    { value: "100%", label: "Placement & Job Focus" },
+    { value: "Active", label: "TAP Academy Intern" },
   ],
   highlights: [
     {
@@ -175,9 +175,9 @@ export const projectsData = [
     id: "project-4",
     number: "04",
     title: "Spatial AR & Web Experience",
-    subtitle: "TAP Academy Placement Training / AR Innovation",
+    subtitle: "TAP Academy Internship / AR Innovation",
     category: "Augmented Reality & UI",
-    description: "An experimental interactive web application integrating augmented reality concepts and fluid GSAP micro-animations, created during placement training at TAP Academy to explore next-generation browser experiences.",
+    description: "An experimental interactive web application integrating augmented reality concepts and fluid GSAP micro-animations, created during my internship at TAP Academy to explore next-generation browser experiences.",
     tags: ["Augmented Reality", "GSAP ScrollTrigger", "React 19", "TAP Academy"],
     githubUrl: "https://github.com/jyotimishra3113-jpg",
     liveUrl: "https://globalakjobs.vercel.app",
@@ -207,7 +207,7 @@ export const contactData = {
 }
 
 export const footerData = {
-  tagline: "Data Analytics & Business Intelligence • St. Joseph's University • TAP Academy",
-  credit: "Trained at TAP Academy",
+  tagline: "Data Analytics & Business Intelligence • BCA Graduate • TAP Academy Intern",
+  credit: "Intern at TAP Academy",
   creditUrl: "https://thetapacademy.com/",
 }
