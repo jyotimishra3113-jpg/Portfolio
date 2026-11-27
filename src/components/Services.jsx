@@ -80,7 +80,7 @@ export default function Services() {
               </div>
 
               {/* Title & Description */}
-              <div className="space-y-3">
+              <div className="space-y-3 flex-1 flex flex-col justify-start">
                 <h3 className="text-xl sm:text-2xl font-black uppercase tracking-tight text-white group-hover:text-[#CCFF00] transition-colors">
                   {service.title}
                 </h3>

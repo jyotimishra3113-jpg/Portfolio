@@ -140,23 +140,43 @@ export default function Projects() {
                   </div>
 
                   {/* Links */}
-                  <div className="flex items-center gap-4 pt-4 border-t border-white/10">
-                    <a
-                      href={project.liveUrl}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="px-5 py-2.5 bg-[#CCFF00] text-black font-bold text-xs uppercase tracking-wider hover:bg-white transition-colors"
-                    >
-                      Live Demo ↗
-                    </a>
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="px-5 py-2.5 border border-white/20 text-white font-semibold text-xs uppercase tracking-wider hover:border-[#CCFF00] hover:text-[#CCFF00] transition-colors"
-                    >
-                      Source Code
-                    </a>
+                  <div className="flex flex-wrap items-center gap-4 pt-4 border-t border-white/10">
+                    {project.buttons ? (
+                      project.buttons.map((btn) => (
+                        <a
+                          key={btn.label}
+                          href={btn.url}
+                          target="_blank"
+                          rel="noreferrer"
+                          className={
+                            btn.primary
+                              ? "px-5 py-2.5 bg-[#CCFF00] text-black font-bold text-xs uppercase tracking-wider hover:bg-white transition-colors"
+                              : "px-5 py-2.5 border border-white/20 text-white font-semibold text-xs uppercase tracking-wider hover:border-[#CCFF00] hover:text-[#CCFF00] transition-colors"
+                          }
+                        >
+                          {btn.label}
+                        </a>
+                      ))
+                    ) : (
+                      <>
+                        <a
+                          href={project.liveUrl}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="px-5 py-2.5 bg-[#CCFF00] text-black font-bold text-xs uppercase tracking-wider hover:bg-white transition-colors"
+                        >
+                          Live Demo ↗
+                        </a>
+                        <a
+                          href={project.githubUrl}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="px-5 py-2.5 border border-white/20 text-white font-semibold text-xs uppercase tracking-wider hover:border-[#CCFF00] hover:text-[#CCFF00] transition-colors"
+                        >
+                          Source Code
+                        </a>
+                      </>
+                    )}
                   </div>
                 </div>
               </div>

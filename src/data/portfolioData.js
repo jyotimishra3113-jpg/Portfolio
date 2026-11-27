@@ -106,31 +106,31 @@ export const aboutData = {
 export const servicesData = [
   {
     number: "01",
-    title: "Exploratory Data Analysis (EDA)",
+    title: "EXPLORATORY DATA ANALYSIS (EDA)",
     accent: "Analytical",
-    description: "Evaluating market datasets, uncovering pricing patterns, and conducting statistical hypothesis testing using Python to reveal actionable business insights.",
-    tags: ["Python", "EDA", "Statistical Analysis", "Hypothesis Testing", "Data Viz"],
+    description: "Exploring datasets, identifying hidden patterns, analyzing trends, and applying statistical techniques to uncover meaningful business insights.",
+    tags: ["PYTHON", "PANDAS", "NUMPY", "EDA", "STATISTICS"],
   },
   {
     number: "02",
-    title: "Business Intelligence & BI Dashboards",
+    title: "BUSINESS INTELLIGENCE & BI DASHBOARDS",
     accent: "Actionable",
-    description: "Designing dynamic Power BI and Tableau dashboards utilizing complex DAX measures, KPI tracking, and Power Query transformations to visualize operational sales trends.",
-    tags: ["Power BI", "DAX Measures", "KPI Tracking", "Power Query", "Tableau"],
+    description: "Developing interactive dashboards to monitor KPIs, evaluate business performance, and transform complex data into clear visual insights.",
+    tags: ["POWER BI", "DAX", "POWER QUERY", "TABLEAU", "KPI TRACKING"],
   },
   {
     number: "03",
-    title: "Data Pipelines & ETL Transformation",
-    accent: "Automated",
-    description: "Cleaning and transforming raw data pipelines with Power Query, validating schema integrity, and automating sales trend indicators with Excel and automated workflows.",
-    tags: ["Power Query", "Data Cleaning", "Data Transformation", "Excel", "ETL"],
+    title: "DATA CLEANING & TRANSFORMATION",
+    accent: "Structured",
+    description: "Preparing raw datasets for reliable analysis by handling missing values, removing inconsistencies, and transforming data into usable formats.",
+    tags: ["PYTHON", "PANDAS", "SQL", "EXCEL", "POWER QUERY"],
   },
   {
     number: "04",
-    title: "Database Design & SQL Systems",
-    accent: "Engineered",
-    description: "Managing relational schemas and NoSQL clusters using SQL, MySQL Workbench, and MongoDB Atlas, while exploring AI workflows and augmented reality tech trained at TAP Academy.",
-    tags: ["SQL", "MongoDB Atlas", "MySQL Workbench", "Augmented Reality", "AI Tools"],
+    title: "SQL & DATABASE ANALYSIS",
+    accent: "Insight-driven",
+    description: "Querying and analyzing structured data using joins, aggregations, subqueries, and window functions to extract relevant information.",
+    tags: ["SQL", "MYSQL", "JOINS", "SUBQUERIES", "WINDOW FUNCTIONS"],
   },
 ]
 
@@ -138,7 +138,7 @@ export const projectsData = [
   {
     id: "project-2",
     number: "01",
-    title: "Smartphone Market Data Analysis & Hypothesis Testing",
+    title: "SMARTPHONE MARKET DATA ANALYSIS & HYPOTHESIS TESTING",
     subtitle: "Exploratory Data Analysis / Python & Tableau",
     category: "Data Analytics",
     description: "Performed end-to-end Exploratory Data Analysis (EDA) and statistical hypothesis testing on an extensive smartphone market dataset. Evaluated pricing trends and specification correlations, preprocessed datasets in Python, and published interactive Tableau visual storytelling dashboards.",
@@ -150,14 +150,26 @@ export const projectsData = [
   {
     id: "project-3",
     number: "02",
-    title: "Business Sales & Performance Dashboard",
-    subtitle: "Power BI / DAX / Power Query Pipelines",
-    category: "Data Analytics & BI",
-    description: "Engineered dynamic Power BI dashboards utilizing calculated DAX measures to track revenue, profit margins, and key performance indicators (KPIs). Streamlined data transformation pipelines in Power Query to uncover actionable sales trends.",
-    tags: ["Power BI", "DAX", "Power Query", "KPI Dashboards", "Sales Analytics"],
-    githubUrl: "https://github.com/jyotimishra3113-jpg",
-    liveUrl: "https://github.com/jyotimishra3113-jpg",
-    image: "/src/assets/projects/project-3.svg",
+    title: "SPOTIFY MUSIC ANALYTICS DASHBOARD",
+    subtitle: "SPOTIFY MUSIC ANALYTICS // PYTHON & POWER BI",
+    category: "DATA ANALYTICS",
+    description: "Developed an interactive music analytics project using Python and Power BI to explore Spotify and YouTube streaming trends, artist performance, and track characteristics. Performed data analysis and manipulation using Python and Pandas, then built an interactive Power BI dashboard to visualize streaming metrics, compare artist performance, and uncover insights into music trends and platform distribution.",
+    tags: ["PYTHON", "PANDAS", "JUPYTER NOTEBOOK", "POWER BI", "DATA VISUALIZATION"],
+    githubUrl: "https://github.com/jyotimishra3113-jpg/Spotify-Music-Analytics-Dashboard",
+    liveUrl: "https://github.com/jyotimishra3113-jpg/Spotify-Music-Analytics-Dashboard/blob/main/Spotify_Music_Dashboard.pbix",
+    buttons: [
+      {
+        label: "Source Code",
+        url: "https://github.com/jyotimishra3113-jpg/Spotify-Music-Analytics-Dashboard",
+        primary: false,
+      },
+      {
+        label: "Power BI Dashboard ↗",
+        url: "https://github.com/jyotimishra3113-jpg/Spotify-Music-Analytics-Dashboard/blob/main/Spotify_Music_Dashboard.pbix",
+        primary: true,
+      },
+    ],
+    image: "/src/assets/projects/project-3.png",
   },
   {
     id: "project-1",
@@ -169,7 +181,7 @@ export const projectsData = [
     tags: ["Web Development", "Guest Module", "Security Module", "Internship", "Production"],
     githubUrl: "https://github.com/jyotimishra3113-jpg",
     liveUrl: "https://globalakjobs.vercel.app",
-    image: "/src/assets/projects/project-1.svg",
+    image: "/src/assets/projects/project-1.png",
   },
 ]
 
@@ -188,9 +200,10 @@ export const contactData = {
     { name: "Call", url: "tel:7676320307" },
   ],
   emailjs: {
-    serviceId: "service_demo",
-    templateId: "template_demo",
-    publicKey: "demo_key",
+    serviceId: import.meta.env.VITE_EMAILJS_SERVICE_ID || "",
+    templateId: import.meta.env.VITE_EMAILJS_TEMPLATE_ID || "",
+    publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY || "",
+    recipientEmail: import.meta.env.VITE_RECIPIENT_EMAIL || "jyotimishra3113@gmail.com",
   },
 }
 
